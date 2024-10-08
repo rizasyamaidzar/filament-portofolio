@@ -10,6 +10,6 @@ class Keterangan extends Model
     use HasFactory;
     protected $fillable = [
         'keterangan',
-        'keterangan_id',
+        'education_id',
     ];
 }

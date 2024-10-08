@@ -2,6 +2,7 @@
 
 namespace App\Filament\Resources;
 
+use App\Filament\Resources\ProfileResource\RelationManagers\EducationsRelationManager;
 use Filament\Forms;
 use Filament\Tables;
 use App\Models\Profil;
@@ -18,6 +19,7 @@ use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\ProfilResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\ProfilResource\RelationManagers;
+use App\Filament\Resources\SosmedResource\RelationManagers\SosmedRelationManager;
 use PHPUnit\Framework\TestStatus\Risky;
 
 class ProfilResource extends Resource
@@ -71,7 +73,8 @@ class ProfilResource extends Resource
     {
         return [
             //
-
+            EducationsRelationManager::class,
+            SosmedRelationManager::class
         ];
     }
 

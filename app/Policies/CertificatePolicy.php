@@ -14,6 +14,7 @@ class CertificatePolicy
     public function viewAny(User $user): bool
     {
         //
+        return true;
     }
 
     /**
@@ -21,7 +22,8 @@ class CertificatePolicy
      */
     public function view(User $user, Certificate $certificate): bool
     {
-        //
+
+        return true;   //
     }
 
     /**
@@ -30,6 +32,7 @@ class CertificatePolicy
     public function create(User $user): bool
     {
         //
+        return true;
     }
 
     /**
@@ -38,6 +41,7 @@ class CertificatePolicy
     public function update(User $user, Certificate $certificate): bool
     {
         //
+        return true;
     }
 
     /**
@@ -46,6 +50,7 @@ class CertificatePolicy
     public function delete(User $user, Certificate $certificate): bool
     {
         //
+        return true;
     }
 
     /**
@@ -54,6 +59,7 @@ class CertificatePolicy
     public function restore(User $user, Certificate $certificate): bool
     {
         //
+        return true;
     }
 
     /**
@@ -62,5 +68,6 @@ class CertificatePolicy
     public function forceDelete(User $user, Certificate $certificate): bool
     {
         //
+        return true;
     }
 }

@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreignId('profile_id')->constrained('profils')->onDelete('cascade');
             $table->timestamps();
         });
-        Schema::create('keterangan', function (Blueprint $table) {
+        Schema::create('keterangans', function (Blueprint $table) {
             $table->id();
             $table->string('keterangan');
             $table->foreignId('education_id')->constrained('education')->onDelete('cascade');

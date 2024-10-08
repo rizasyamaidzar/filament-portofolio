@@ -22,7 +22,7 @@ class ProfilPolicy
     public function view(User $user, Profil $profil): bool
     {
         // Logika otorisasi untuk melihat profil tertentu
-        return $user->id === $profil->user_id;  // Misalnya, hanya pemilik profil yang dapat melihatnya
+        return true; // Misalnya, hanya pemilik profil yang dapat melihatnya
     }
 
     /**

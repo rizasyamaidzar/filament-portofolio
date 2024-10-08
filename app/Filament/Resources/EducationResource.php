@@ -8,16 +8,14 @@ use Filament\Forms\Form;
 use App\Models\Education;
 use Filament\Tables\Table;
 use Filament\Resources\Resource;
-use function Laravel\Prompts\text;
 use Filament\Forms\Components\Card;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
-
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\EducationResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\EducationResource\RelationManagers;
-use App\Filament\Resources\KeteranganResource\RelationManagers\EducationsRelationManager;
+use App\Filament\Resources\EducationResource\RelationManagers\BlogsRelationManager;
 
 class EducationResource extends Resource
 {
@@ -38,7 +36,6 @@ class EducationResource extends Resource
                         TextInput::make('profile_id')->required(),
                     ])
                     ->columns(2),
-
             ]);
     }
 
@@ -57,7 +54,6 @@ class EducationResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -70,7 +66,7 @@ class EducationResource extends Resource
     {
         return [
             //
-            EducationsRelationManager::class
+            BlogsRelationManager::class
         ];
     }
 

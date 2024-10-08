@@ -14,4 +14,12 @@ class Profil extends Model
         'deskripsi',
         'summary',
     ];
+    public function educations()
+    {
+        return $this->hasMany(Education::class);
+    }
+    public function sosmed()
+    {
+        return $this->hasMany(Sosmed::class);
+    }
 }

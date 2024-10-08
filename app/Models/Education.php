@@ -14,4 +14,9 @@ class Education extends Model
         'jurusan',
         'profile_id',
     ];
+
+    public function keterangans()
+    {
+        return $this->hasMany(Keterangan::class);
+    }
 }
