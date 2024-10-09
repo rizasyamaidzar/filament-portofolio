@@ -1,29 +1,30 @@
 <?php
 
-namespace App\Filament\Resources\ExperienceDokumentasiResource\RelationManagers;
+namespace App\Filament\Resources\ToolProjectResource\RelationManagers;
 
 use Filament\Forms;
+use Filament\Forms\Components\FileUpload;
 use Filament\Tables;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
-use Filament\Forms\Components\Textarea;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\FileUpload;
+use Filament\Tables\Columns\ImageColumn;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Resources\RelationManagers\RelationManager;
-use Filament\Tables\Columns\ImageColumn;
 
-class DokumentasiRelationManager extends RelationManager
+class ToolsRelationManager extends RelationManager
 {
-    protected static string $relationship = 'dokumentasi';
+    protected static string $relationship = 'tools';
 
     public function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\FileUpload::make('foto')->disk('public')->directory('dokumentasi-experience')->visibility('public')
+                TextInput::make('nama')->required()->maxLength(255),
+                FileUpload::make('foto')->disk('public')->directory('tools-project')->visibility('public'),
+                TextInput::make('link')->required()->maxLength(255),
             ]);
     }
 
@@ -32,7 +33,9 @@ class DokumentasiRelationManager extends RelationManager
         return $table
             ->recordTitleAttribute('nama')
             ->columns([
-                Tables\Columns\ImageColumn::make('foto')->size(100),
+                ImageColumn::make('foto'),
+                TextColumn::make('nama'),
+                TextColumn::make('link'),
             ])
             ->filters([
                 //

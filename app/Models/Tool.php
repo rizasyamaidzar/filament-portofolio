@@ -10,7 +10,7 @@ class Tool extends Model
     use HasFactory;
     protected $fillable = [
         'nama',
-        'logo',
+        'foto',
         'link',
         'project_id',
     ];

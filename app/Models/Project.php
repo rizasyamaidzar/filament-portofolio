@@ -11,8 +11,25 @@ class Project extends Model
     protected $fillable = [
         'nama',
         'keterangan',
-        'image',
+        'foto',
         'link_yt',
         'project_id',
     ];
+
+    public function featurs()
+    {
+        return $this->hasMany(Fitur::class);
+    }
+    public function dokumentasi()
+    {
+        return $this->hasMany(Project_dokumentasi::class);
+    }
+    public function roles()
+    {
+        return $this->hasMany(Project_role::class);
+    }
+    public function tools()
+    {
+        return $this->hasMany(Tool::class);
+    }
 }
