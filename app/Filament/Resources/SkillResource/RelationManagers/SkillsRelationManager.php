@@ -22,7 +22,7 @@ class SkillsRelationManager extends RelationManager
             ->schema([
                 TextInput::make('nama')->required(),
                 FileUpload::make('logo')->disk('public')->directory('skill')->visibility('public'),
-                TextInput::make('link')->required(),
+                TextInput::make('link'),
 
             ]);
     }

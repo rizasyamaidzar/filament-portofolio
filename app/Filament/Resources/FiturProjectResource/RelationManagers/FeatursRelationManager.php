@@ -18,6 +18,9 @@ class FeatursRelationManager extends RelationManager
     {
         return $form
             ->schema([
+                Forms\Components\TextInput::make('nama')
+                    ->required()
+                    ->maxLength(255),
                 Forms\Components\TextInput::make('keterangan')
                     ->required()
                     ->maxLength(255),
@@ -29,6 +32,7 @@ class FeatursRelationManager extends RelationManager
         return $table
             ->recordTitleAttribute('keterangan')
             ->columns([
+                Tables\Columns\TextColumn::make('nama'),
                 Tables\Columns\TextColumn::make('keterangan'),
             ])
             ->filters([

@@ -22,6 +22,7 @@ use App\Filament\Resources\ProjectResource\RelationManagers;
 use App\Filament\Resources\RoleProjectResource\RelationManagers\RolesRelationManager;
 use App\Filament\Resources\ToolProjectResource\RelationManagers\ToolsRelationManager;
 use App\Models\Dokumentasi;
+use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Textarea;
 
 class ProjectResource extends Resource
@@ -38,7 +39,7 @@ class ProjectResource extends Resource
                 Card::make()
                     ->schema([
                         TextInput::make('nama')->required()->maxLength(255),
-                        Textarea::make('keterangan')->required()->maxLength(255),
+                        Textarea::make('keterangan')->required(),
                         FileUpload::make('foto')->disk('public')->directory('project')->visibility('public'),
                         TextInput::make('link_yt')
                     ])
