@@ -10,6 +10,7 @@ class Project_role extends Model
     use HasFactory;
     protected $fillable = [
         'nama',
+        'deskripsi',
         'project_id',
     ];
 }

@@ -21,6 +21,7 @@ class RolesRelationManager extends RelationManager
                 Forms\Components\TextInput::make('nama')
                     ->required()
                     ->maxLength(255),
+                Forms\Components\Textarea::make('deskripsi')->required()
             ]);
     }
 
@@ -30,6 +31,7 @@ class RolesRelationManager extends RelationManager
             ->recordTitleAttribute('nama')
             ->columns([
                 Tables\Columns\TextColumn::make('nama'),
+                Tables\Columns\TextColumn::make('deskripsi'),
             ])
             ->filters([
                 //

@@ -19,18 +19,6 @@ return new class extends Migration
             $table->string('link_yt')->nullable();
             $table->timestamps();
         });
-        Schema::create('project_roles', function (Blueprint $table) {
-            $table->id();
-            $table->string('nama');
-            $table->foreignId('project_id')->constrained('projects')->onDelete('cascade');
-            $table->timestamps();
-        });
-        Schema::create('deskripsis', function (Blueprint $table) {
-            $table->id();
-            $table->text('keterangan');
-            $table->foreignId('project_role_id')->constrained('project_roles')->onDelete('cascade');
-            $table->timestamps();
-        });
         Schema::create('project_dokumentasi', function (Blueprint $table) {
             $table->id();
             $table->string('foto');
