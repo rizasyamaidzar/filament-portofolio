@@ -16,22 +16,28 @@
     <section style="background-color: #0C0A1F">
         <div class="grid grid-cols-4 md:grid-cols-4 py-10 md:py-20 container">
             <div class="transition ease-in-out delay-150hover:-translate-y-1 hover:scale-110 duration-300">
-                <img src="img/icon/resume.png" alt="" class="max-w-12 md:max-w-20 shadow-lg mx-auto">
-                <h2 class="mt-2 text-center md:text-2xl text-white font-bold mb-5  animate-pulse">Resume</h2>
+                <a href="/resume">
+                    <img src="img/icon/resume.png" alt="" class="max-w-12 md:max-w-20 shadow-lg mx-auto">
+                    <h2 class="mt-2 text-center md:text-2xl text-white font-bold mb-5  animate-pulse">Resume</h2>
+                </a>
             </div>
             <div class="transition ease-in-out delay-150hover:-translate-y-1 hover:scale-110 duration-300">
-                <img src="img/icon/experience.png" alt="" class="max-w-12 md:max-w-20 shadow-lg mx-auto">
-                <h2 class="mt-2 text-center md:text-2xl text-white font-bold mb-5  animate-pulse">Experience</h2>
+                <a href="/experience">
+                    <img src="img/icon/experience.png" alt="" class="max-w-12 md:max-w-20 shadow-lg mx-auto">
+                    <h2 class="mt-2 text-center md:text-2xl text-white font-bold mb-5  animate-pulse">Experience</h2>
+                </a>
             </div>
             <div class="transition ease-in-out delay-150hover:-translate-y-1 hover:scale-110 duration-300">
-                <a href="project.html">
+                <a href="/project">
                     <img src="img/icon/project.png" alt="" class="max-w-12 md:max-w-20 shadow-lg mx-auto">
                     <h2 class="mt-2 text-center md:text-2xl text-white font-bold mb-5  animate-pulse">Project</h2>
                 </a>
             </div>
             <div class="transition ease-in-out delay-150hover:-translate-y-1 hover:scale-110 duration-300">
-                <img src="img/icon/sertif.png" alt="" class="max-w-12 md:max-w-20 shadow-lg mx-auto">
-                <h2 class="mt-2 text-center md:text-2xl text-white font-bold animate-pulse">Certificate</h2>
+                <a href="/certificate">
+                    <img src="img/icon/sertif.png" alt="" class="max-w-12 md:max-w-20 shadow-lg mx-auto">
+                    <h2 class="mt-2 text-center md:text-2xl text-white font-bold animate-pulse">Certificate</h2>
+                </a>
             </div>
         </div>
 

@@ -64,47 +64,51 @@
 
         </div>
         <!-- start dokumentasi -->
-        <div class="relative">
-            <div class="carousel max-w-2xl flex mx-auto">
-                <!-- Carousel items -->
-                @foreach ($project->dokumentasi as $dokumentasi)
-                    <div class="carousel-item">
-                        <img src="{{ asset('storage/' . $dokumentasi->foto) }}" alt="Carousel Image 1"
-                            class="w-full h-[400px] object-cover">
-                    </div>
-                @endforeach
-            </div>
-            <!-- Carousel controls -->
-            <div class="absolute inset-y-0 left-0 flex items-center justify-start pl-4">
-                <button
-                    class="carousel-control-prev bg-gray-800 hover:bg-gray-700 text-white rounded-full p-2 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
-                        </path>
-                    </svg>
-                </button>
-            </div>
-            <div class="absolute inset-y-0 right-0 flex items-center justify-end pr-4">
-                <button
-                    class="carousel-control-next bg-gray-800 hover:bg-gray-700 text-white rounded-full p-2 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                    </svg>
-                </button>
+        <div class="container mt-5 px-14 md:px-20">
+            <h2 class="text-center text-ungu font-bold text-4xl pt-5">Dokumentasi</h2>
+            <div class="relative my-10">
+                <div class="carousel max-w-2xl flex mx-auto">
+                    <!-- Carousel items -->
+                    @foreach ($project->dokumentasi as $dokumentasi)
+                        <div class="carousel-item">
+                            <img src="{{ asset('storage/' . $dokumentasi->foto) }}" alt="Carousel Image 1"
+                                class="w-full h-[400px] object-cover">
+                        </div>
+                    @endforeach
+                </div>
+                <!-- Carousel controls -->
+                <div class="absolute inset-y-0 left-0 flex items-center justify-start pl-4">
+                    <button
+                        class="carousel-control-prev bg-gray-800 hover:bg-gray-700 text-white rounded-full p-2 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="absolute inset-y-0 right-0 flex items-center justify-end pr-4">
+                    <button
+                        class="carousel-control-next bg-gray-800 hover:bg-gray-700 text-white rounded-full p-2 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
 
 
         <!-- view on github -->
-        <iframe class="mx-auto my-5 max-w-80 max-h-52 md:max-w-[1000px] md:max-h-[500px]" width="560" height="315"
-            src="https://www.youtube.com/watch?v=8El1Uzw59Xg" frameborder="0"
+        <iframe class="mx-auto my-5 max-w-80 max-h-52 md:max-w-full md:max-h-full" width="560" height="315"
+            src="{{ $project->link_yt }}" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
+
         <h2
-            class="my-10 text-center text-white bg-ungu rounded-xl shadow-xl shadow-black font-bold md:text-2xl py-5 md:mx-40">
-            <a href="https://github.com/rizasyamaidzar/perpus">View On Github</a>
+            class="my-10 text-center text-white bg-ungu rounded-xl shadow-xl shadow-black font-semibold md:text-2xl py-5 md:mx-40">
+            <a href="https://github.com/rizasyamaidzar" target="_blank">View On Github</a>
         </h2>
 
     </div>
