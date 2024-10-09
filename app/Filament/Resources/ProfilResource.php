@@ -2,25 +2,26 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\ProfileResource\RelationManagers\EducationsRelationManager;
 use Filament\Forms;
 use Filament\Tables;
 use App\Models\Profil;
 use Filament\Forms\Form;
 use Filament\Tables\Table;
-use Filament\Forms\Components\RichEditor;
 use Filament\Resources\Resource;
 use Filament\Forms\Components\Card;
 use Filament\Forms\Components\Textarea;
 use Filament\Tables\Actions\EditAction;
 use Filament\Tables\Columns\TextColumn;
+use PHPUnit\Framework\TestStatus\Risky;
 use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\RichEditor;
 use Illuminate\Database\Eloquent\Builder;
 use App\Filament\Resources\ProfilResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\ProfilResource\RelationManagers;
+use App\Filament\Resources\SkillResource\RelationManagers\SkillsRelationManager;
 use App\Filament\Resources\SosmedResource\RelationManagers\SosmedRelationManager;
-use PHPUnit\Framework\TestStatus\Risky;
+use App\Filament\Resources\ProfileResource\RelationManagers\EducationsRelationManager;
 
 class ProfilResource extends Resource
 {
@@ -36,9 +37,9 @@ class ProfilResource extends Resource
                 Card::make()
                     ->schema([
                         TextInput::make('nama')->required(),
-                        TextInput::make('keterangan')->required(),
-                        TextInput::make('deskripsi')->required(),
-                        TextInput::make('summary')->required(),
+                        Textarea::make('keterangan')->required(),
+                        Textarea::make('deskripsi')->required(),
+                        Textarea::make('summary')->required(),
                     ])
                     ->columns(1),
             ]);
@@ -50,9 +51,6 @@ class ProfilResource extends Resource
             ->columns([
                 //
                 TextColumn::make('nama'),
-                TextColumn::make('keterangan'),
-                TextColumn::make('deskripsi'),
-                TextColumn::make('summary'),
             ])
             ->filters([
                 //
@@ -74,7 +72,8 @@ class ProfilResource extends Resource
         return [
             //
             EducationsRelationManager::class,
-            SosmedRelationManager::class
+            SosmedRelationManager::class,
+            SkillsRelationManager::class,
         ];
     }
 

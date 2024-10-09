@@ -22,4 +22,8 @@ class Profil extends Model
     {
         return $this->hasMany(Sosmed::class);
     }
+    public function skills()
+    {
+        return $this->hasMany(Skill::class);
+    }
 }

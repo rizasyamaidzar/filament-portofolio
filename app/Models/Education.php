@@ -12,7 +12,7 @@ class Education extends Model
         'nama',
         'logo',
         'jurusan',
-        'profile_id',
+        'profil_id',
     ];
 
     public function keterangans()

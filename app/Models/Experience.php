@@ -15,4 +15,13 @@ class Experience extends Model
         'foto',
         'deskripsi',
     ];
+
+    public function jobdesk()
+    {
+        return $this->hasMany(Jobdesk::class);
+    }
+    public function dokumentasi()
+    {
+        return $this->hasMany(Dokumentasi::class);
+    }
 }

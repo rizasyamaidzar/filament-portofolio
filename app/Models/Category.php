@@ -11,4 +11,9 @@ class Category extends Model
     protected $fillable = [
         'nama',
     ];
+
+    public function categories()
+    {
+        return $this->hasMany(Certificate::class);
+    }
 }

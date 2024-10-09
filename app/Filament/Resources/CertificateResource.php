@@ -4,25 +4,23 @@ namespace App\Filament\Resources;
 
 use Filament\Forms;
 use Filament\Tables;
+use App\Models\Category;
 use Filament\Forms\Form;
-use App\Models\Education;
 use Filament\Tables\Table;
+use App\Models\Certificate;
 use Filament\Resources\Resource;
 use Filament\Forms\Components\Card;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Forms\Components\TextInput;
 use Illuminate\Database\Eloquent\Builder;
-use App\Filament\Resources\EducationResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use App\Filament\Resources\EducationResource\RelationManagers;
-use App\Filament\Resources\EducationResource\RelationManagers\BlogsRelationManager;
-use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\Hidden;
-use Filament\Tables\Columns\ImageColumn;
+use App\Filament\Resources\CertificateResource\Pages;
+use App\Filament\Resources\CertificateResource\RelationManagers;
+use App\Filament\Resources\CertificateResource\RelationManagers\CategoriesRelationManager;
 
-class EducationResource extends Resource
+class CertificateResource extends Resource
 {
-    protected static ?string $model = Education::class;
+    protected static ?string $model = Category::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
@@ -33,12 +31,9 @@ class EducationResource extends Resource
                 //
                 Card::make()
                     ->schema([
-                        TextInput::make('nama')->required(),
-                        FileUpload::make('logo')->disk('public')->directory('education')->visibility('public'),
-                        TextInput::make('jurusan')->required(),
-                        Hidden::make('profil_id')->default(2),
+                        TextInput::make('nama'),
                     ])
-                    ->columns(2),
+                    ->columns(1),
             ]);
     }
 
@@ -47,9 +42,7 @@ class EducationResource extends Resource
         return $table
             ->columns([
                 //
-                ImageColumn::make('logo'),
                 TextColumn::make('nama'),
-                TextColumn::make('jurusan'),
             ])
             ->filters([
                 //
@@ -68,16 +61,16 @@ class EducationResource extends Resource
     {
         return [
             //
-            BlogsRelationManager::class
+            CategoriesRelationManager::class
         ];
     }
 
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListEducation::route('/'),
-            'create' => Pages\CreateEducation::route('/create'),
-            'edit' => Pages\EditEducation::route('/{record}/edit'),
+            'index' => Pages\ListCertificates::route('/'),
+            'create' => Pages\CreateCertificate::route('/create'),
+            'edit' => Pages\EditCertificate::route('/{record}/edit'),
         ];
     }
 }
