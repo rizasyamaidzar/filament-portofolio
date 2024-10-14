@@ -37,13 +37,12 @@ return [
             'throw' => false,
         ],
 
-    'public' => [
-        'driver' => 'local',
-        'root' => public_path(), // Simpan langsung di folder public
-        'url' => env('APP_URL'),
-        'visibility' => 'public',
+        'public' => [
+            'driver' => 'local',
+            'root' => public_path(), // Simpan langsung di folder public
+            'url' => env('APP_URL'),
+            'visibility' => 'public',
         ],
-
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),

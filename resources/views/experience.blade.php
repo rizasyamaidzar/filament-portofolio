@@ -34,7 +34,7 @@
         <section class="container mt-10">
             <div class="grid grid-rows-1 grid-flow-col mx-10 lg:mx-28 my-5">
                 <div class="row-span-1 lg:mx-10 ">
-                    <img src="img/profile/freelance.png" alt="">
+                    <img src="{{ asset($experience->foto) }}" alt="">
                 </div>
                 <div class="col-span-2 mx-10">
                     <h2 class="font-bold lg:text-2xl text-xl">{{ $experience->nama }}</h2>
