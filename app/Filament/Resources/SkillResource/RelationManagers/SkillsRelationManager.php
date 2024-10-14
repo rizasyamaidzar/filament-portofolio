@@ -12,6 +12,8 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Resources\RelationManagers\RelationManager;
 use App\Models\Skill;
+use Illuminate\Support\Facades\Storage;
+
 
 class SkillsRelationManager extends RelationManager
 {
@@ -33,7 +35,7 @@ class SkillsRelationManager extends RelationManager
         return $table
             ->recordTitleAttribute('nama')
             ->columns([
-                Tables\Columns\ImageColumn::make('logo')->label('Logo')->url(fn ($record) => asset( $record->logo))->size(70)->circular(),
+                Tables\Columns\ImageColumn::make('logo')->url(fn ($record) => secure_asset($record->logo))->size(70)->circular(),
                 Tables\Columns\TextColumn::make('nama'),
             ])
             ->filters([
