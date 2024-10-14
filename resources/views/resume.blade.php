@@ -19,7 +19,7 @@
                                 <a href="{{ $sosmed->link }}" target="_blank">
                                     <button class="bg-hitam p-3 rounded-lg text-ungu mx-2  "><!-- Instagram -->
                                         <!-- Linkedin -->
-                                        <img src="{{ asset('storage/' . $sosmed->logo) }}" alt="" class="h-5 w-5">
+                                        <img src="{{ asset( $sosmed->logo) }}" alt="" class="h-5 w-5">
                                     </button>
                                 </a>
                             @endforeach
@@ -46,7 +46,7 @@
         @foreach ($resume->educations as $education)
             <div class="grid grid-rows-1 gap-3 grid-flow-col mx-10 lg:mx-28">
                 <div class="row-span-1 lg:mx-10 ">
-                    <img src="{{ asset('storage/' . $education->logo) }}" alt="" class="max-w-sm">
+                    <img src="{{ asset($education->logo) }}" alt="" class="max-w-sm">
                 </div>
                 <div class="col-span-2 mx-10">
                     <h2 class="font-bold lg:text-2xl text-xl">{{ $education->nama }}</h2>
@@ -96,7 +96,7 @@
             <div class="grid grid-cols-4 md:grid-cols-6 py-10 md:py-20 container">
                 @foreach ($resume->skills as $skill)
                     <div class="transition ease-in-out delay-150hover:-translate-y-1 hover:scale-110 duration-300">
-                        <img src="{{ asset('storage/' . $skill->logo) }}" alt=""
+                        <img src="{{ asset($skill->logo) }}" alt=""
                             class="max-w-10 md:max-w-14 shadow-lg mx-auto">
                         <h2 class="mt-2 text-center md:text-2xl text-hitam font-bold mb-5  animate-pulse">
                             <a href="{{ $skill->link }}" target="_blank"> {{ $skill->nama }}

@@ -8,7 +8,7 @@
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                     @foreach ($category->categories as $certificate)
                         <div>
-                            <img class="h-auto max-w-full rounded-lg" src="{{ asset('storage/' . $certificate->foto) }}"
+                            <img class="h-auto max-w-full rounded-lg" src="{{ asset($certificate->foto) }}"
                                 alt="">
                         </div>
                     @endforeach

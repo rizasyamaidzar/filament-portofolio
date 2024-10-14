@@ -37,12 +37,11 @@ return [
             'throw' => false,
         ],
 
-        'public' => [
-            'driver' => 'local',
-            'root' => storage_path('app/public'),
-            'url' => env('APP_URL') . '/storage',
-            'visibility' => 'public',
-            'throw' => false,
+    'public' => [
+        'driver' => 'local',
+        'root' => public_path(), // Simpan langsung di folder public
+        'url' => env('APP_URL'),
+        'visibility' => 'public',
         ],
 
         's3' => [

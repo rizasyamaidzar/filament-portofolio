@@ -20,7 +20,7 @@
             @foreach ($projects as $project)
                 <div class="transition ease-in-out delay-150hover:-translate-y-1 hover:scale-110 duration-300">
                     <a href="/project/{{ $project->id }}">
-                        <img src=" {{ asset('storage/' . $project->foto) }}" alt=""
+                        <img src=" {{ asset($project->foto) }}" alt=""
                             class="max-w-12 md:max-w-20 shadow-lg mx-auto">
                         <h2 class="mt-2 text-center md:text-2xl text-white font-bold mb-5  animate-pulse">
                             {{ $project->nama }}</h2>

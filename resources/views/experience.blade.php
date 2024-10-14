@@ -54,7 +54,7 @@
                     <!-- Carousel items -->
                     @foreach ($experience->dokumentasi as $dokumentasi)
                         <div class="carousel-item">
-                            <img src="{{ asset('storage/' . $dokumentasi->foto) }}" alt="Carousel Image 1"
+                            <img src="{{ asset($dokumentasi->foto) }}" alt="Carousel Image 1"
                                 class="w-full h-[400px] object-cover">
                         </div>
                     @endforeach

@@ -2,7 +2,7 @@
 @section('content')
     <!-- start hero -->
     <div style="background-image: url(../img/bg/project.png)" class="mt-[55px] bg-cover bg-no-repeat bg-blend-multiply">
-        <img src="{{ asset('storage/' . $project->foto) }}" alt="" class="mx-auto pt-40 max-w-64 md:max-w-full">
+        <img src="{{ asset($project->foto) }}" alt="" class="mx-auto pt-40 max-w-64 md:max-w-full">
         <div
             class="bg-white rounded-xl p-10 font-bold shadow-black md:text-4xl text-2xl text-center mx-20 shadow-xl  md:mx-60 mb-10">
             <h1>{{ $project->nama }}</h1>
@@ -32,7 +32,7 @@
             @foreach ($project->tools as $tool)
                 <button type="button"
                     class="shadow-md text-ungu bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-cente me-2 mb-2">
-                    <img src="{{ asset('storage/' . $tool->foto) }}" alt="" class="w-10 h-10">
+                    <img src="{{ asset($tool->foto) }}" alt="" class="w-10 h-10">
                     <a href="{{ $tool->link }}" class="mx-2 text-xl">
                         {{ $tool->nama }}
                     </a>
@@ -71,7 +71,7 @@
                     <!-- Carousel items -->
                     @foreach ($project->dokumentasi as $dokumentasi)
                         <div class="carousel-item">
-                            <img src="{{ asset('storage/' . $dokumentasi->foto) }}" alt="Carousel Image 1"
+                            <img src="{{ asset($dokumentasi->foto) }}" alt="Carousel Image 1"
                                 class="w-full h-[400px] object-cover">
                         </div>
                     @endforeach
