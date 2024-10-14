@@ -35,7 +35,11 @@ class SkillsRelationManager extends RelationManager
         return $table
             ->recordTitleAttribute('nama')
             ->columns([
+<<<<<<< HEAD
                 Tables\Columns\ImageColumn::make('logo')->url(fn ($record) => secure_asset($record->logo))->size(70)->circular(),
+=======
+                Tables\Columns\ImageColumn::make('logo')->label('Logo')->url(fn($record) => asset($record->logo))->size(70)->circular(),
+>>>>>>> ecb4d7704ba0b3038917303b51266153f3248da1
                 Tables\Columns\TextColumn::make('nama'),
             ])
             ->filters([
