@@ -14,5 +14,6 @@ Route::get('/experience', [GuestController::class, 'experience']);
 Route::get('/project', [GuestController::class, 'project']);
 Route::get('/project/{id}', [GuestController::class, 'showProject']);
 Route::get('/resume', [GuestController::class, 'resume']);
+Route::get('/home', [GuestController::class, 'home']);
 
 Route::fallback([GuestController::class, 'error_page'])->name('error_page');

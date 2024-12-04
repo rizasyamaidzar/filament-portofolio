@@ -12,6 +12,11 @@ use Illuminate\Http\Request;
 class GuestController extends Controller
 {
     //
+
+    public function home()
+    {
+        return view('public.pages.home');
+    }
     public function certificate()
     {
         $category = Category::with('categories')->get();
