@@ -15,7 +15,7 @@ Route::get('/project', [GuestController::class, 'project']);
 Route::get('/project/{id}', [GuestController::class, 'showProject']);
 Route::get('/resume', [GuestController::class, 'resume']);
 
-Route::get('/about', [GuestController::class, 'abour']);
+Route::get('/about', [GuestController::class, 'about']);
 Route::get('/contact', [GuestController::class, 'contact']);
 Route::get('/home', [GuestController::class, 'home']);
 Route::get('/service', [GuestController::class, 'service']);
