@@ -7,15 +7,18 @@
                 <!-- START ABOUT IMAGE DESIGN AREA -->
                 <div class="col-lg-4">
                     <div class="about-image-part wow fadeInUp delay-0-3s">
-                        <img src="assets/images/about/profile.png" alt="About Me" />
-                        <h2>Bentos Walker</h2>
-                        <p>I am a Web Designer based in san francisco.</p>
+                        <img src="assets/images/profil.png" alt="About Me" />
+                        <h2>{{ $nama }}</h2>
+                        <p>{{ $role }}</p>
                         <div class="about-social text-center">
                             <ul>
-                                <li><a href=""><i class="ri-facebook-circle-fill"></i></a></li>
-                                <li><a href=""><i class="ri-twitter-x-line"></i></a></li>
-                                <li><a href=""><i class="ri-linkedin-fill"></i></a></li>
-                                <li><a href=""><i class="ri-github-line"></i></a></li>
+                                <li><a href="https://github.com/rizasyamaidzar" target="_blank"><i
+                                            class="ri-github-line"></i></a>
+                                <li><a href="https://www.linkedin.com/in/rizaafifsyamaidzar/" target="_blank"><i
+                                            class="ri-linkedin-fill"></i></a></li>
+                                <li><a href="https://www.instagram.com/rizaafifs_/" target="_blank"><i
+                                            class="ri-instagram-fill"></i></a></li>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -26,12 +29,11 @@
                     <div class="about-content-part wow fadeInUp delay-0-2s">
                         <p>Hello There!</p>
                         <h2>
-                            I’m Bentos Walker, a product designer crafting user-centric design with pixel-perfect
-                            precision.
+                            {{ $nama }}, {{ $role }}
                         </h2>
                         <div class="adress-field">
                             <ul>
-                                <li><i class="ri-circle-fill"></i>Available for Freelancing</li>
+                                <li><i class="ri-circle-fill"></i>Available for Work</li>
                             </ul>
                         </div>
                         <div class="hero-btns">
@@ -39,16 +41,13 @@
                         </div>
                     </div>
                     <div class="about-content-part-bottom wow fadeInUp delay-0-2s">
-                        <h2>Company I Worked With</h2>
+                        <h2>Tools</h2>
                         <div class="company-list">
                             <div class="scroller" data-direction="left" data-speed="slow">
                                 <div class="scroller__inner">
-                                    <img src="assets/images/client-logos/partner1.png" alt="" />
-                                    <img src="assets/images/client-logos/partner2.png" alt="" />
-                                    <img src="assets/images/client-logos/partner3.png" alt="" />
-                                    <img src="assets/images/client-logos/partner4.png" alt="" />
-                                    <img src="assets/images/client-logos/partner5.png" alt="" />
-                                    <img src="assets/images/client-logos/partner1.png" alt="" />
+                                    @foreach ($tools as $tool)
+                                        <img src="{{ $tool }}" alt="" />
+                                    @endforeach
                                 </div>
                             </div>
                         </div>
@@ -59,6 +58,24 @@
         </div>
     </section>
     <!-- / END ABOUT DESIGN AREA -->
+    <!-- START CALL TO ACTION DESIGN AREA -->
+    <section class="call-to-action-area">
+        <div class="container">
+            <div class="row">
+                <!-- START ABOUT TEXT DESIGN AREA -->
+                <div class="col-lg-12">
+                    <div class="call-to-action-part wow fadeInUp delay-0-2s text-center">
+                        <h2>i'm RIZA AFIF SYAMAIDZAR</h2>
+                        <p>full-stack web developer skilled in creating seamless, engaging web applications. Combining
+                            front-end and back-end expertise, I transform ideas into functional, visually appealing digital
+                            solutions</p>
+                    </div>
+                </div>
+                <!-- / END ABOUT TEXT DESIGN AREA -->
+            </div>
+        </div>
+    </section>
+    <!--  // END CALL TO ACTION DESIGN AREA -->
     <!-- START PORTFOLIO DESIGN AREA -->
     <section id="portfolio" class="projects-area">
         <div class="container">
@@ -67,8 +84,6 @@
                     <div class="col-xl-12 col-lg-12">
                         <div class="section-title text-center wow fadeInUp delay-0-2s">
                             <h2>Works & Projects</h2>
-                            <p>Check out some of my design projects, meticulously crafted with love and dedication,
-                                each one reflecting the passion and soul I poured into every detail.</p>
                         </div>
                     </div>
                 </div>
@@ -181,9 +196,10 @@
                 <!-- START ABOUT TEXT DESIGN AREA -->
                 <div class="col-lg-12">
                     <div class="call-to-action-part wow fadeInUp delay-0-2s text-center">
-                        <h2>Are You Ready to kickstart your project with a touch of magic?</h2>
-                        <p>Reach out and let's make it happen ✨. I'm also available for full-time or Part-time
-                            opportunities to push the boundaries of design and deliver exceptional work.</p>
+                        <h2>Welcome to my Project Showcase! Here you'll find a selection of my work</h2>
+                        <p>demonstrating my skills and passion. Each project is crafted with attention to detail, innovative
+                            solutions, and a commitment to delivering exceptional user experiences. Dive in and explore how
+                            I bring ideas to life through code.</p>
                         <div class="hero-btns">
                             <a href="contact.html" class="theme-btn">Let's Talk <i class="ri-download-line"></i></a>
                         </div>

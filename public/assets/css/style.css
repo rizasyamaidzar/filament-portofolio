@@ -2,7 +2,7 @@
 * ----------------------------------------------------------------------------------------
 Author       : Hridoy
 Template Name: Bentos - Personal Portfolio HTML Template
-Version      : 1.0                                          
+Version      : 1.0
 * ----------------------------------------------------------------------------------------
 */
 
@@ -36,13 +36,13 @@ Version      : 1.0
 :root {
     --main-color: #9f9f9f;
     --heading-color: #fff;
-    --primary-color: #eb5d3a;
+    --primary-color: #5a13df;
     --lighter-color: #ccc;
     --subtitle-color: #ccc;
-    --black-color: #000;
+    --black-color: #3b006b;
     --border-color: rgba(119, 119, 125, .2);
     --button-border: rgba(119, 119, 125, .2);
-    --body-background: #000;
+    --body-background: #150320;
     --grey-bg: #E6EAEE;
 }
 
@@ -1389,7 +1389,7 @@ html {
 .scroller[data-animated="true"] .scroller__inner {
     width: max-content;
     flex-wrap: nowrap;
-    animation: scroll var(--_animation-duration, 40s) var(--_animation-direction, forwards) linear infinite;
+    animation: scroll var(--_animation-duration, 5s) var(--_animation-direction, forwards) linear infinite;
 }
 
 .scroller[data-direction="right"] {
@@ -1404,8 +1404,8 @@ html {
     --_animation-duration: 20s;
 }
 
-.scroller[data-speed="slow"] {
-    --_animation-duration: 60s;
+.scroller[data-speed="fast"] {
+    --_animation-duration: 100s;
 }
 
 @keyframes scroll {
@@ -2323,7 +2323,7 @@ ul.extra-skills li i {
 }
 .call-to-action-area {
     padding-top: 15px;
-    
+
 }
 .call-to-action-part  h2{
     font-size: 40px;

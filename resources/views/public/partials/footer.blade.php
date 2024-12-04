@@ -5,7 +5,7 @@
                 <div class="col-lg-6">
                     <div class="copyright-text">
                         <p>
-                            Copyright @2023, <a href="index.html">Bentos</a> All
+                            Copyright @2024, <a href="index.html">Riza Afif Syamaidzar</a> All
                             Rights Reserved.
                         </p>
                     </div>
@@ -13,7 +13,7 @@
                 <div class="col-lg-6">
                     <div class="copyright-text extra-copyright">
                         <p>
-                            Crafted with ❤️ Tanvir Hossain
+                            Let's Collaborate
                         </p>
                     </div>
                 </div>
