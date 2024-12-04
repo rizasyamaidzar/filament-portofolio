@@ -13,9 +13,25 @@ class GuestController extends Controller
 {
     //
 
+    public function about()
+    {
+        return view('public.pages.about');
+    }
+    public function contact()
+    {
+        return view('public.pages.contact');
+    }
     public function home()
     {
         return view('public.pages.home');
+    }
+    public function service()
+    {
+        return view('public.pages.service');
+    }
+    public function works()
+    {
+        return view('public.pages.works');
     }
     public function certificate()
     {
