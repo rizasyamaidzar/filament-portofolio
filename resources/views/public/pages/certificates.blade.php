@@ -16,7 +16,7 @@
                 <ul class="project-filter filter-btns-one justify-content-left pb-15 wow fadeInUp delay-0-2s">
                     <li data-filter="*" class="current">Show All</li>
                     @foreach ($categories as $category)
-                        <li data-filter=".{{ $category->nama }}">{{ $category->nama }}</li>
+                        <li data-filter=".{{ $category->id }}">{{ $category->nama }}</li>
                         {{-- <li data-filter=".design">Design</li>
                     <li data-filter=".branding">Branding</li>
                     <li data-filter=".marketing">Marketing</li>
@@ -27,7 +27,7 @@
                     <!-- START SINGLE PORTFOLIO DESIGN AREA -->
                     @foreach ($categories as $category)
                         @foreach ($category->categories as $certificate)
-                            <div class="col-lg-4 col-md-6 item {{ $category->nama }}">
+                            <div class="col-lg-4 col-md-6 item {{ $category->id }}">
                                 <div class="project-item style-two wow fadeInUp delay-0-3s">
                                     <div class="project-image">
                                         <img src="{{ asset($certificate->foto) }}" alt="{{ $category->nama }}">
