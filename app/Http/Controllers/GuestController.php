@@ -49,10 +49,22 @@ class GuestController extends Controller
             ]
         ],
     ];
+
+    // PROJECT
+    public $category = [
+        'website',
+        'mobile',
+    ];
+    public $popup = [
+        'work-popup',
+        'popup-youtube',
+    ];
     public function about()
     {
-        dd($this->education);
-        return view('public.pages.about');
+        // dd($this->education[0]);
+        return view('public.pages.about', [
+            'educations' => $this->education
+        ]);
     }
     public function contact()
     {
@@ -60,15 +72,42 @@ class GuestController extends Controller
     }
     public function home()
     {
+        // foreach ($this->education as $education) {
+        //     dd($education['experience']);
+        // }
+        $projects = [
+            [
+                'nama' => 'Project Pertama',
+                'category' => $this->category[0],
+                'popup' => $this->popup[0],
+                'link' => 'assets/images/profil.png',
+                'image' => 'assets/images/profil.png',
+            ],
+            [
+                'nama' => 'Project Kedua',
+                'category' => $this->category[1],
+                'popup' => $this->popup[1],
+                'link' => 'https://www.youtube.com/watch?v=FXfqLUuVBis',
+                'image' => 'assets/images/profil.png',
+            ]
+        ];
+        // dd($projects);
         return view('public.pages.home', [
             'nama' => $this->nama,
             'role' => $this->role,
-            'tools' => $this->tools
+            'tools' => $this->tools,
+            'popup' => 'popup-youtube',
+            'projects' => $projects,
+            'categories' => $this->category
         ]);
     }
     public function service()
     {
         return view('public.pages.service');
+    }
+    public function singleProject()
+    {
+        return view('public.pages.single-project');
     }
     public function works()
     {

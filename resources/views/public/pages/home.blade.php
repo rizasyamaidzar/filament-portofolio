@@ -89,37 +89,43 @@
                 </div>
                 <ul class="project-filter filter-btns-one justify-content-left pb-15 wow fadeInUp delay-0-2s">
                     <li data-filter="*" class="current">Show All</li>
-                    <li data-filter=".design">Design</li>
-                    <li data-filter=".branding">Branding</li>
+                    @foreach ($categories as $category)
+                        <li data-filter=".{{ $category }}">{{ $category }}</li>
+                    @endforeach
+
+                    {{-- <li data-filter=".branding">Branding</li>
                     <li data-filter=".marketing">Marketing</li>
-                    <li data-filter=".game">Game</li>
+                    <li data-filter=".game">Game</li> --}}
                 </ul>
                 <div class="row project-masonry-active">
                     <!-- START SINGLE PORTFOLIO DESIGN AREA -->
-                    <div class="col-lg-4 col-md-6 item branding game">
-                        <div class="project-item style-two wow fadeInUp delay-0-3s">
-                            <div class="project-image">
-                                <img src="assets/images/projects/work1.jpg" alt="Project">
-                                <a href="single-project.html" class="details-btn"><i class="ri-arrow-right-up-line"></i></a>
-                            </div>
-                            <div class="project-content">
-                                <span class="sub-title">Branding</span>
-                                <h3>Mobile Application Design</h3>
+                    @foreach ($projects as $project)
+                        <div class="col-lg-4 col-md-6 item {{ $project['category'] }}">
+                            <div class="project-item style-two wow fadeInUp delay-0-3s">
+                                <div class="project-image">
+                                    <img src="{{ $project['image'] }}" alt="Project">
+                                    <a href="{{ $project['link'] }}" class="details-btn {{ $project['popup'] }}"><i
+                                            class="ri-arrow-right-up-line"></i></a>
+                                </div>
+                                <div class="project-content">
+                                    <span class="sub-title">{{ $project['category'] }}</span>
+                                    <h3>{{ $project['nama'] }}</h3>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
                     <!-- START PORTFOLIO DESIGN AREA -->
                     <!-- START SINGLE PORTFOLIO DESIGN AREA -->
                     <div class="col-lg-4 col-md-6 item design marketing graphics">
                         <div class="project-item style-two wow fadeInUp delay-0-4s">
                             <div class="project-image">
                                 <img src="assets/images/projects/work2.jpg" alt="Project">
-                                <a href="https://www.youtube.com/watch?v=qZEPs3vmYB4" class="details-btn popup-youtube"><i
-                                        class="ri-arrow-right-up-line"></i></a>
+                                <a href="https://www.youtube.com/watch?v=qZEPs3vmYB4"
+                                    class="details-btn {{ $popup }}"><i class="ri-arrow-right-up-line"></i></a>
                             </div>
                             <div class="project-content">
                                 <span class="sub-title">Design</span>
-                                <h3>Website Makeup Design</h3>
+                                <h3>1 Website Makeup Design</h3>
                             </div>
                         </div>
                     </div>
@@ -134,7 +140,7 @@
                             </div>
                             <div class="project-content">
                                 <span class="sub-title">Graphics</span>
-                                <h3>Brand Identity and Motion Design</h3>
+                                <h3>2 Brand Identity and Motion Design</h3>
                             </div>
                         </div>
                     </div>
@@ -149,7 +155,7 @@
                             </div>
                             <div class="project-content">
                                 <span class="sub-title">Game</span>
-                                <h3>Mobile Application Design</h3>
+                                <h3>3 Mobile Application Design</h3>
                             </div>
                         </div>
                     </div>
@@ -164,7 +170,7 @@
                             </div>
                             <div class="project-content">
                                 <span class="sub-title">Branding</span>
-                                <h3>Application Design</h3>
+                                <h3>4 Application Design</h3>
                             </div>
                         </div>
                     </div>
@@ -179,7 +185,7 @@
                             </div>
                             <div class="project-content">
                                 <span class="sub-title">Design</span>
-                                <h3>Website Development</h3>
+                                <h3>5 Website Development</h3>
                             </div>
                         </div>
                     </div>

@@ -19,7 +19,7 @@ Route::get('/about', [GuestController::class, 'about']);
 Route::get('/contact', [GuestController::class, 'contact']);
 Route::get('/home', [GuestController::class, 'home']);
 Route::get('/service', [GuestController::class, 'service']);
-Route::get('/project/{id}', [GuestController::class, 'project']);
+Route::get('/single-project', [GuestController::class, 'singleProject']);
 Route::get('/works', [GuestController::class, 'works']);
 
 Route::fallback([GuestController::class, 'error_page'])->name('error_page');

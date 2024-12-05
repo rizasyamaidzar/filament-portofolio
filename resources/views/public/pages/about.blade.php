@@ -7,7 +7,7 @@
                 <!-- START ABOUT IMAGE DESIGN AREA -->
                 <div class="col-lg-4">
                     <div class="about-image-part wow fadeInUp delay-0-3s">
-                        <img src="assets/images/about/profile.png" alt="About Me" />
+                        <img src="assets/images/profil.png" alt="About Me" />
                     </div>
                 </div>
                 <!-- / END ABOUT IMAGE DESIGN AREA -->
@@ -15,18 +15,18 @@
                 <div class="col-lg-8">
                     <div class="about-content-part wow fadeInUp delay-0-2s">
                         <h2>
-                            I’m Bentos Walker, a product designer.
+                            I’m Riza Afif Syamaidzar
                         </h2>
-                        <p>I am a San francisco-based product designer with a focus on web design, illustration, a visual
-                            development. I have a diverse range of experience having worked across various fields and
-                            industries.</p>
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
-                            classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a
-                            Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin
-                            words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in
-                            classical literature, discovered the undoubtable source.</p>
+                        <p>Seseorang yang memiliki kemampuan dan pengalaman di bidang Full Stack Web Developer & Backend
+                            Engineer dibuktikan dengan freelance, magang dan beberapa project yang telah terselesaikan.
+                            Ketertarikan di bidang tersebut membuat saya aktif dalam berbagai organisasi, kolaborasi, bahkan
+                            sebagai narasumber di bidang Full Stack Web Developer & Backend Engineer. Aktif disana membuat
+                            saya memiliki inisiatif yang tinggi, mampu berdaptasi secara cepat terhadap perkembangan
+                            teknologi serta kemampuan menganalisis masalah kompleks dan menemukan solusi yang efektif dan
+                            efisien. Selama berkuliah saya juga aktif dalam berbagai organisasi, kepanitiaan, dan volunteer.
+                        </p>
                         <div class="hero-btns">
-                            <a href="contact.html" class="theme-btn">Get In touch<i class="ri-mail-send-line"></i></a>
+                            <a href="/contact" class="theme-btn">Get In touch<i class="ri-mail-send-line"></i></a>
                         </div>
                     </div>
                 </div>
@@ -90,19 +90,6 @@
                         <div class="experience-list">
                             <div class="single-resume">
                                 <h2>Education</h2>
-                                <!-- START SINGLE RESUME DESIGN AREA -->
-                                <div class="resume-item wow fadeInUp delay-0-3s">
-                                    <div class="icon">
-                                        <i class="ri-book-line"></i>
-                                    </div>
-                                    <div class="content">
-                                        <span class="years">2013 - 2015</span>
-                                        <h4>Bachelor Degree of Information Technology</h4>
-                                        <span class="company">State University bangladesh
-                                        </span>
-                                    </div>
-                                </div>
-                                <!-- / END SINGLE RESUME DESIGN AREA -->
                                 <!-- START SINGLE RESUME DESIGN AREA -->
                                 <div class="resume-item wow fadeInUp delay-0-3s">
                                     <div class="icon">
