@@ -10,6 +10,8 @@ Route::get('/', function () {
     return view('home');
 });
 Route::get('/certificates', [GuestController::class, 'certificate']);
+
+
 Route::get('/experience', [GuestController::class, 'experience']);
 Route::get('/project', [GuestController::class, 'project']);
 Route::get('/project/{id}', [GuestController::class, 'showProject']);
