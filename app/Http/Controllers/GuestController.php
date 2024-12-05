@@ -116,7 +116,7 @@ class GuestController extends Controller
     public function certificate()
     {
         $category = Category::with('categories')->get();
-        return view('certificate', [
+        return view('public.pages.certificates', [
             'categories' => $category
         ]);
     }
@@ -147,6 +147,10 @@ class GuestController extends Controller
         return view('project.show', [
             'project' => $project
         ]);
+    }
+    public function certificatePage()
+    {
+        dd('a');
     }
     public function error_page()
     {

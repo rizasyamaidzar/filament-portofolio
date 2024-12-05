@@ -33,6 +33,7 @@
                                 <li><a class="nav-link-click" href="/about">about</a></li>
                                 <li><a class="nav-link-click" href="/service">services</a></li>
                                 <li><a class="nav-link-click" href="/works">works</a></li>
+                                <li><a class="nav-link-click" href="/certificate">Certificate</a></li>
                                 <li><a class="nav-link-click" href="/contact">Contact</a></li>
                             </ul>
                         </div>

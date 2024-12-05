@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
-Route::get('/certificate', [GuestController::class, 'certificate']);
+Route::get('/certifates', [GuestController::class, 'certificate']);
 Route::get('/experience', [GuestController::class, 'experience']);
 Route::get('/project', [GuestController::class, 'project']);
 Route::get('/project/{id}', [GuestController::class, 'showProject']);
