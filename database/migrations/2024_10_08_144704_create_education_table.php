@@ -14,31 +14,21 @@ return new class extends Migration
         Schema::create('education', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
-            $table->string('logo');
+            $table->string('tahun');
             $table->string('jurusan');
-            $table->foreignId('profile_id')->constrained('profils')->onDelete('cascade');
+            $table->string('logo');
             $table->timestamps();
         });
-        Schema::create('keterangans', function (Blueprint $table) {
+        Schema::create('achievements', function (Blueprint $table) {
             $table->id();
-            $table->string('keterangan');
+            $table->string('deskripsi');
             $table->foreignId('education_id')->constrained('education')->onDelete('cascade');
             $table->timestamps();
         });
-        Schema::create('sosmed', function (Blueprint $table) {
+        Schema::create('tools', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
             $table->string('logo');
-            $table->string('link');
-            $table->foreignId('profile_id')->constrained('profils')->onDelete('cascade');
-            $table->timestamps();
-        });
-        Schema::create('skills', function (Blueprint $table) {
-            $table->id();
-            $table->string('nama');
-            $table->string('logo');
-            $table->string('link');
-            $table->foreignId('profile_id')->constrained('profils')->onDelete('cascade');
             $table->timestamps();
         });
     }

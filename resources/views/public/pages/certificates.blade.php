@@ -26,7 +26,7 @@
                 </ul>
                 <div class="row project-masonry-active">
                     <!-- START SINGLE PORTFOLIO DESIGN AREA -->
-                    @foreach ($categories as $category)
+                    {{-- @foreach ($categories as $category)
                         @foreach ($category->categories as $certificate)
                             <div class="col-lg-4 col-md-6 item {{ $category->id }}">
                                 <div class="project-item style-two wow fadeInUp delay-0-3s">
@@ -42,31 +42,12 @@
                                 </div>
                             </div>
                         @endforeach
-                    @endforeach
+                    @endforeach --}}
                     <!-- END SINGLE PORTFOLIO DESIGN AREA -->
                 </div>
             </div>
         </div>
     </section>
     <!-- // END PORTFOLIO DESIGN AREA -->
-    <!-- START CALL TO ACTION DESIGN AREA -->
-    <section class="call-to-action-area">
-        <div class="container">
-            <div class="row">
-                <!-- START ABOUT TEXT DESIGN AREA -->
-                <div class="col-lg-12">
-                    <div class="about-content-part call-to-action-part wow fadeInUp delay-0-2s text-center">
-                        <h2>Let’s bring your ideas to life with creativity and precision!</h2>
-                        <p>Whether it’s a collaboration, freelance project, or a full-time opportunity, I’m ready to
-                            contribute my skills to create something extraordinary together. 🚀</p>
-                        <div class="hero-btns">
-                            <a href="/contact" class="theme-btn">Let's Talk <i class="ri-download-line"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- / END ABOUT TEXT DESIGN AREA -->
-            </div>
-        </div>
-    </section>
-    <!--  // END CALL TO ACTION DESIGN AREA -->
+    @include('public.partials.caption')
 @endsection

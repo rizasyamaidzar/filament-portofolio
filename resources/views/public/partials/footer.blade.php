@@ -5,7 +5,8 @@
                 <div class="col-lg-6">
                     <div class="copyright-text">
                         <p>
-                            Copyright @2024, <a href="index.html">Riza Afif Syamaidzar</a> All
+                            Copyright @2024, <a href="https://www.linkedin.com/in/rizaafifsyamaidzar">Riza Afif
+                                Syamaidzar</a> All
                             Rights Reserved.
                         </p>
                     </div>

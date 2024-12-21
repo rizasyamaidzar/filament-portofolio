@@ -14,39 +14,67 @@
                 </div>
                 <div class="row">
                     <!-- START SINGLE SERVICE DESIGN AREA -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item wow fadeInUp delay-0-2s">
-                            <i class="ri-global-fill"></i>
-                            <h4>Brand Identity Design</h4>
-                            <p>Bentos gives you the blocks & kits you need to create a true website within minutes.</p>
+                    @foreach ($services as $service)
+                        <div class="col-lg-4 col-md-6">
+                            <div class="service-item wow fadeInUp delay-0-2s">
+                                <i class="{{ $service['icon'] }}"></i>
+                                <h4>{{ $service['nama'] }}</h4>
+                                <p>{{ $service['desc'] }}</p>
+                            </div>
                         </div>
-                    </div>
-                    <!-- / END SINGLE SERVICE DESIGN AREA -->
-                    <!-- START SINGLE SERVICE DESIGN AREA -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item wow fadeInUp delay-0-4s">
-                            <i class="ri-quill-pen-line"></i>
-                            <h4>Website Design</h4>
-                            <p>Bentos gives you the blocks & kits you need to create a true website within minutes.</p>
-                        </div>
-                    </div>
-                    <!-- / END SINGLE SERVICE DESIGN AREA -->
-                    <!-- START SINGLE SERVICE DESIGN AREA -->
-                    <div class="col-lg-4 col-md-6">
-                        <div class="service-item wow fadeInUp delay-0-6s">
-                            <i class="ri-pantone-fill"></i>
-                            <h4>Application Design</h4>
-                            <p>Bentos gives you the blocks & kits you need to create a true website within minutes.</p>
-                        </div>
-                    </div>
-                    <!-- / END SINGLE SERVICE DESIGN AREA -->
+                    @endforeach
+                    <!-- END SINGLE SERVICE DESIGN AREA -->
                 </div>
             </div>
         </div>
     </section>
     <!-- / END SERVICE DESIGN AREA -->
+    <!-- START Testimoni DESIGN AREA -->
+    <section class="testimonials-area">
+        <div class="container">
+            <div class="container-inner">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12">
+                        <div class="section-title text-center wow fadeInUp delay-0-2s">
+                            <p>Testinomials</p>
+                            <h2>What clients say!</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="testimonials-wrap">
+                            <!-- START SINGLE TESTIMONIALS DESIGN AREA -->
+                            @foreach ($testimonies as $testimoni)
+                                <div class="testimonial-item wow fadeInUp delay-0-3s">
+                                    <div class="author">
+                                        <img src="assets/images/testimonials/author1.jpg" alt="Author" />
+                                    </div>
+                                    <div class="text">
+                                        {{ $testimoni['desc'] }}
+                                    </div>
+                                    <div class="testi-des">
+                                        <h5>{{ $testimoni['nama'] }}</h5>
+                                    </div>
+                                </div>
+                            @endforeach
+                        </div>
+                        <div class="slider-arrows wow fadeInUp delay-0-6s text-center pt-40">
+                            <button class="testimonial-prev">
+                                <i class="ri-arrow-left-s-line"></i>
+                            </button>
+                            <button class="testimonial-next">
+                                <i class="ri-arrow-right-s-line"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- / END Testimoni DESIGN AREA -->
     <!-- START PRICING DESIGN AREA -->
-    <section class="pricing-area">
+    {{-- <section class="pricing-area">
         <div class="container">
             <div class="container-inner">
                 <div class="row">
@@ -133,7 +161,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- / END PRICING DESIGN AREA -->
     <!-- START CALL TO ACTION DESIGN AREA -->
     <section class="call-to-action-area">

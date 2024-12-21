@@ -10,7 +10,7 @@
 <title>Riza Afif Syamaidzar</title>
 <!-- FAV ICON -->
 <link rel="apple-touch-icon" href="assets/images/favicon.png">
-<link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
+<link rel="shortcut icon" type="image/png" href="{{ asset('assets/images/logo.png') }}">
 <!-- ALL GOOGLE FONTS -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

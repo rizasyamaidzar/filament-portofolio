@@ -5,7 +5,8 @@
                 <!-- START LOGO DESIGN AREA -->
                 <div class="logo-outer">
                     <div class="logo">
-                        <a href="index.html"><img src="assets/images/logo.png" alt="Logo" title="Logo" /></a>
+                        <a href="/"><img src="{{ asset('assets/images/logo.png') }}" alt="Logo"
+                                title="Logo" /></a>
                     </div>
                 </div>
                 <!-- / END LOGO DESIGN AREA -->
@@ -15,8 +16,8 @@
                     <nav class="main-menu navbar-expand-lg">
                         <div class="navbar-header">
                             <div class="mobile-logo">
-                                <a href="index.html">
-                                    <img src="assets/images/logo.png" alt="Logo" title="Logo" />
+                                <a href="/">
+                                    <img src="{{ asset('assets/images/logo.png') }}" alt="Logo" title="Logo" />
                                 </a>
                             </div>
                             <!-- Toggle Button -->
@@ -31,9 +32,9 @@
                             <ul class="navigation onepage clearfix">
                                 <li><a class="nav-link-click" href="/">Home</a></li>
                                 <li><a class="nav-link-click" href="/about">about</a></li>
-                                <li><a class="nav-link-click" href="/service">services</a></li>
-                                <li><a class="nav-link-click" href="/works">works</a></li>
-                                <li><a class="nav-link-click" href="/certificates">Certificate</a></li>
+                                {{-- <li><a class="nav-link-click" href="/service">services</a></li> --}}
+                                {{-- <li><a class="nav-link-click" href="/works">works</a></li> --}}
+                                {{-- <li><a class="nav-link-click" href="/certificates">Certificate</a></li> --}}
                                 <li><a class="nav-link-click" href="/contact">Contact</a></li>
                             </ul>
                         </div>

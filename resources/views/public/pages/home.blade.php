@@ -92,10 +92,6 @@
                     @foreach ($categories as $category)
                         <li data-filter=".{{ $category }}">{{ $category }}</li>
                     @endforeach
-
-                    {{-- <li data-filter=".branding">Branding</li>
-                    <li data-filter=".marketing">Marketing</li>
-                    <li data-filter=".game">Game</li> --}}
                 </ul>
                 <div class="row project-masonry-active">
                     <!-- START SINGLE PORTFOLIO DESIGN AREA -->
@@ -114,82 +110,6 @@
                             </div>
                         </div>
                     @endforeach
-                    <!-- START PORTFOLIO DESIGN AREA -->
-                    <!-- START SINGLE PORTFOLIO DESIGN AREA -->
-                    <div class="col-lg-4 col-md-6 item design marketing graphics">
-                        <div class="project-item style-two wow fadeInUp delay-0-4s">
-                            <div class="project-image">
-                                <img src="assets/images/projects/work2.jpg" alt="Project">
-                                <a href="https://www.youtube.com/watch?v=qZEPs3vmYB4"
-                                    class="details-btn {{ $popup }}"><i class="ri-arrow-right-up-line"></i></a>
-                            </div>
-                            <div class="project-content">
-                                <span class="sub-title">Design</span>
-                                <h3>1 Website Makeup Design</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- / END SINGLE PORTFOLIO DESIGN AREA -->
-                    <!-- START SINGLE PORTFOLIO DESIGN AREA -->
-                    <div class="col-lg-4 col-md-6 item game graphics">
-                        <div class="project-item style-two wow fadeInUp delay-0-5s">
-                            <div class="project-image">
-                                <img src="assets/images/projects/work3.jpg" alt="Project">
-                                <a href="assets/images/projects/work3.jpg" class="details-btn work-popup"><i
-                                        class="ri-arrow-right-up-line"></i></a>
-                            </div>
-                            <div class="project-content">
-                                <span class="sub-title">Graphics</span>
-                                <h3>2 Brand Identity and Motion Design</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- / END SINGLE PORTFOLIO DESIGN AREA -->
-                    <!-- START SINGLE PORTFOLIO DESIGN AREA -->
-                    <div class="col-lg-4 col-md-6 item design game">
-                        <div class="project-item style-two wow fadeInUp delay-0-6s">
-                            <div class="project-image">
-                                <img src="assets/images/projects/work4.jpg" alt="Project">
-                                <a href="assets/images/projects/work4.jpg" class="details-btn work-popup"><i
-                                        class="ri-arrow-right-up-line"></i></a>
-                            </div>
-                            <div class="project-content">
-                                <span class="sub-title">Game</span>
-                                <h3>3 Mobile Application Design</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- / END SINGLE PORTFOLIO DESIGN AREA -->
-                    <!-- START SINGLE PORTFOLIO DESIGN AREA -->
-                    <div class="col-lg-4 col-md-6 item branding game">
-                        <div class="project-item style-two wow fadeInUp delay-0-7s">
-                            <div class="project-image">
-                                <img src="assets/images/projects/work5.jpg" alt="Project">
-                                <a href="assets/images/projects/work5.jpg" class="details-btn work-popup"><i
-                                        class="ri-arrow-right-up-line"></i></a>
-                            </div>
-                            <div class="project-content">
-                                <span class="sub-title">Branding</span>
-                                <h3>4 Application Design</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- START PORTFOLIO DESIGN AREA -->
-                    <!-- START SINGLE PORTFOLIO DESIGN AREA -->
-                    <div class="col-lg-4 col-md-6 item design marketing graphics">
-                        <div class="project-item style-two wow fadeInUp delay-0-8s">
-                            <div class="project-image">
-                                <img src="assets/images/projects/work6.jpg" alt="Project">
-                                <a href="https://www.youtube.com/watch?v=qZEPs3vmYB4" class="details-btn popup-youtube"><i
-                                        class="ri-arrow-right-up-line"></i></a>
-                            </div>
-                            <div class="project-content">
-                                <span class="sub-title">Design</span>
-                                <h3>5 Website Development</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- / END SINGLE PORTFOLIO DESIGN AREA -->
                 </div>
             </div>
         </div>
@@ -207,7 +127,7 @@
                             solutions, and a commitment to delivering exceptional user experiences. Dive in and explore how
                             I bring ideas to life through code.</p>
                         <div class="hero-btns">
-                            <a href="contact.html" class="theme-btn">Let's Talk <i class="ri-download-line"></i></a>
+                            <a href="/contact" class="theme-btn">Let's Talk <i class="ri-download-line"></i></a>
                         </div>
                     </div>
                 </div>

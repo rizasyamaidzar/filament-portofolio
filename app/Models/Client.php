@@ -5,17 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Education extends Model
+class Client extends Model
 {
     use HasFactory;
     protected $fillable = [
         'nama',
         'logo',
-        'jurusan',
+        'desc',
     ];
-
-    public function keterangans()
-    {
-        return $this->hasMany(Keterangan::class);
-    }
 }

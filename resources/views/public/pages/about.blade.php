@@ -17,13 +17,12 @@
                         <h2>
                             I’m Riza Afif Syamaidzar
                         </h2>
-                        <p>Seseorang yang memiliki kemampuan dan pengalaman di bidang Full Stack Web Developer & Backend
-                            Engineer dibuktikan dengan freelance, magang dan beberapa project yang telah terselesaikan.
-                            Ketertarikan di bidang tersebut membuat saya aktif dalam berbagai organisasi, kolaborasi, bahkan
-                            sebagai narasumber di bidang Full Stack Web Developer & Backend Engineer. Aktif disana membuat
-                            saya memiliki inisiatif yang tinggi, mampu berdaptasi secara cepat terhadap perkembangan
-                            teknologi serta kemampuan menganalisis masalah kompleks dan menemukan solusi yang efektif dan
-                            efisien. Selama berkuliah saya juga aktif dalam berbagai organisasi, kepanitiaan, dan volunteer.
+                        <p>Someone who has the ability and experience in the field of Full Stack Web Developer & Backend
+                            Engineer proven by freelance, internships and several completed projects. Interest in the field
+                            makes me active in various organizations, collaborations. Being active there makes me have high
+                            initiative, able to adapt quickly to technological developments and the ability to analyze
+                            complex problems and find effective and efficient solutions. During college I was also active in
+                            various organizations, committees, and volunteers.
                         </p>
                         <div class="hero-btns">
                             <a href="/contact" class="theme-btn">Get In touch<i class="ri-mail-send-line"></i></a>
@@ -46,40 +45,18 @@
                             <h2>Experience</h2>
                             <div class="experience-list">
                                 <!-- START SINGLE RESUME DESIGN AREA -->
-                                <div class="resume-item wow fadeInUp delay-0-3s">
-                                    <div class="icon">
-                                        <i class="ri-book-line"></i>
+                                @foreach ($experiences as $experience)
+                                    <div class="resume-item wow fadeInUp delay-0-3s">
+                                        <div class="icon">
+                                            <i class="ri-book-line"></i>
+                                        </div>
+                                        <div class="content">
+                                            <span class="years">{{ $experience['tahun'] }}</span>
+                                            <h4>{{ $experience['nama'] }}</h4>
+                                            <span class="company"> {{ $experience['role'] }} </span>
+                                        </div>
                                     </div>
-                                    <div class="content">
-                                        <span class="years">2021 - Present</span>
-                                        <h4>Themeforest Market</h4>
-                                        <span class="company"> Web Designer </span>
-                                    </div>
-                                </div>
-                                <!-- / END SINGLE RESUME DESIGN AREA -->
-                                <!-- START SINGLE RESUME DESIGN AREA -->
-                                <div class="resume-item wow fadeInUp delay-0-3s">
-                                    <div class="icon">
-                                        <i class="ri-book-line"></i>
-                                    </div>
-                                    <div class="content">
-                                        <span class="years">2021 - 2023</span>
-                                        <h4>Envato Theme Developer</h4>
-                                        <span class="company">Web Development</span>
-                                    </div>
-                                </div>
-                                <!-- / END SINGLE RESUME DESIGN AREA -->
-                                <!-- START SINGLE RESUME DESIGN AREA -->
-                                <div class="resume-item wow fadeInUp delay-0-3s">
-                                    <div class="icon">
-                                        <i class="ri-book-line"></i>
-                                    </div>
-                                    <div class="content">
-                                        <span class="years">2021 - 2022</span>
-                                        <h4> Marketing Expert GRP</h4>
-                                        <span class="company">Web Developer & Business Partner</span>
-                                    </div>
-                                </div>
+                                @endforeach
                                 <!-- / END SINGLE RESUME DESIGN AREA -->
                             </div>
                         </div>
@@ -91,28 +68,18 @@
                             <div class="single-resume">
                                 <h2>Education</h2>
                                 <!-- START SINGLE RESUME DESIGN AREA -->
-                                <div class="resume-item wow fadeInUp delay-0-3s">
-                                    <div class="icon">
-                                        <i class="ri-book-line"></i>
+                                @foreach ($educations as $education)
+                                    <div class="resume-item wow fadeInUp delay-0-3s">
+                                        <div class="icon">
+                                            <i class="ri-book-line"></i>
+                                        </div>
+                                        <div class="content">
+                                            <span class="years">{{ $education['tahun'] }}</span>
+                                            <h4>{{ $education['nama'] }}</h4>
+                                            <span class="company">{{ $education['jurusan'] }}</span>
+                                        </div>
                                     </div>
-                                    <div class="content">
-                                        <span class="years">2021 - 2024</span>
-                                        <h4>Higher secoundery Education </h4>
-                                        <span class="company">Premium College United VC</span>
-                                    </div>
-                                </div>
-                                <!-- / END SINGLE RESUME DESIGN AREA -->
-                                <!-- START SINGLE RESUME DESIGN AREA -->
-                                <div class="resume-item wow fadeInUp delay-0-3s">
-                                    <div class="icon">
-                                        <i class="ri-book-line"></i>
-                                    </div>
-                                    <div class="content">
-                                        <span class="years">2021 - 2024</span>
-                                        <h4>Webster College</h4>
-                                        <span class="company"> UI/UX Design </span>
-                                    </div>
-                                </div>
+                                @endforeach
                                 <!-- / END SINGLE RESUME DESIGN AREA -->
                             </div>
                         </div>
@@ -124,7 +91,7 @@
     </section>
     <!-- / END RESUME EXPERIENCE DESIGN AREA -->
     <!-- START TESTIMONIALS DESIGN AREA -->
-    <section class="testimonials-area">
+    {{-- <section class="testimonials-area">
         <div class="container">
             <div class="container-inner">
                 <div class="row">
@@ -215,26 +182,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- / END TESTIMONIALS DESIGN AREA -->
     <!-- START CALL TO ACTION DESIGN AREA -->
-    <section class="call-to-action-area">
-        <div class="container">
-            <div class="row">
-                <!-- START ABOUT TEXT DESIGN AREA -->
-                <div class="col-lg-12">
-                    <div class="about-content-part call-to-action-part wow fadeInUp delay-0-2s text-center">
-                        <h2>Are You Ready to kickstart your project with a touch of magic?</h2>
-                        <p>Reach out and let's make it happen ✨. I'm also available for full-time or Part-time opportunities
-                            to push the boundaries of design and deliver exceptional work.</p>
-                        <div class="hero-btns">
-                            <a href="contact.html" class="theme-btn">Let's Talk <i class="ri-download-line"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <!-- / END ABOUT TEXT DESIGN AREA -->
-            </div>
-        </div>
-    </section>
+    @include('public.partials.caption')
     <!--  // END CALL TO ACTION DESIGN AREA -->
 @endsection
