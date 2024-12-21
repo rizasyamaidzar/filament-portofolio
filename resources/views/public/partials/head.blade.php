@@ -2,10 +2,9 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Bentos - Creative Portfolio Showcase Template">
-<meta name="keywords"
-    content="personal, portfolio new, html, one page, bootstrap, new html template, design, creative, onepage, clean, modern">
-<meta name="author" content="Tanvir Hossain">
+<meta name="description" content="riza afif syamaidzar">
+<meta name="keywords" content="riza afif syamaidzar">
+<meta name="author" content="riza afif syamaidzar">
 <!-- PAGE TITLE -->
 <title>Riza Afif Syamaidzar</title>
 <!-- FAV ICON -->
